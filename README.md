@@ -6,7 +6,7 @@ A fun, educational math game where players race to reach exactly 100 points by c
 
 ## 🎮 Live Demo
 
-[Play Race to 100 Live](https://yourusername.github.io/race-to-100-game/) <!-- Update with your GitHub Pages URL -->
+[Play Race to 100 Live](https://shahriar1824.github.io/race-to-100/) <!-- Update with your GitHub Pages URL -->
 
 ## ✨ Features
 
@@ -47,16 +47,14 @@ A fun, educational math game where players race to reach exactly 100 points by c
 ## 🛠️ Installation & Setup
 
 ### Option 1: Play Online
-Simply visit the [Live Demo](https://yourusername.github.io/race-to-100-game/)
+Simply visit the [Live Demo](https://shahriar1824.github.io/race-to-100/)
 
 ### Option 2: Run Locally
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/race-to-100-game.git
+git clone https://github.com/Shahriar1824/race-to-100.git
 
 # Navigate to the project folder
 cd race-to-100-game
 
 # Open index.html in your browser
-# Or use a local server:
-python -m http.server 8000
