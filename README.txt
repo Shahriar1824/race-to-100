@@ -2,7 +2,7 @@
 
 A fun, educational math game where players race to reach exactly 100 points by combining dice values in creative ways. Perfect for kids and adults who want to practice mental math while having fun!
 
-![Game Screenshot](demo/demo.png)
+![Screenshot](https://github.com/Shahriar1824/race-to-100/blob/main/demo/demo.png?raw=true)
 
 ## 🎮 Live Demo
 
