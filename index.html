@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Race to 100 - Math Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- Game Header -->
+        <header class="game-header">
+            <h1><i class="fas fa-flag-checkered"></i> Race to 100</h1>
+            <p>Roll, calculate, and be the first to reach exactly 100 points!</p>
+        </header>
+
+        <!-- Game Content Area -->
+        <main class="game-content">
+            <!-- Instructions Panel -->
+            <section class="instructions-panel">
+                <h2><i class="fas fa-info-circle"></i> How to Play</h2>
+
+                <div class="instruction-step">
+                    <div class="step-number">1</div>
+                    <div class="step-text"><strong>Start your turn</strong> by clicking the "Roll Dice" button.</div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">2</div>
+                    <div class="step-text"><strong>Combine your dice</strong> by choosing one of the four operations
+                        after rolling.</div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">3</div>
+                    <div class="step-text"><strong>Reach exactly 100</strong> to win! If you go over 100, you'll bust
+                        and subtract points.</div>
+                </div>
+
+                <div class="instruction-step">
+                    <div class="step-number">4</div>
+                    <div class="step-text"><strong>Operations available:</strong> Create a two-digit number, add, or
+                        multiply the dice values.</div>
+                </div>
+
+                <!-- Game Settings -->
+                <div class="settings-panel">
+                    <h3><i class="fas fa-cog"></i> Game Settings</h3>
+
+                    <div class="setting-item">
+                        <label for="gameMode">
+                            <i class="fas fa-users"></i> Game Mode:
+                        </label>
+                        <select id="gameMode" class="mode-select">
+                            <option value="2players">2 Players</option>
+                            <option value="vsComputer">Play vs Computer</option>
+                        </select>
+                    </div>
+
+                    <div class="setting-item">
+                        <label for="computerDifficulty">
+                            <i class="fas fa-robot"></i> Computer Difficulty:
+                        </label>
+                        <select id="computerDifficulty" class="mode-select">
+                            <option value="easy">Easy</option>
+                            <option value="medium" selected>Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+
+                    <div class="button-group">
+                        <button id="newGameBtn" class="action-btn secondary-btn">
+                            <i class="fas fa-plus-circle"></i> New Game
+                        </button>
+                        <button id="saveGameBtn" class="action-btn">
+                            <i class="fas fa-save"></i> Save Game
+                        </button>
+                    </div>
+
+                    <div class="save-status" id="saveStatus"></div>
+                </div>
+            </section>
+
+            <!-- Game Panel -->
+            <section class="game-panel">
+                <!-- Players Section -->
+                <div class="players-container">
+                    <div class="player active" id="player1">
+                        <div class="player-header">
+                            <h3><i class="fas fa-user"></i> Player 1</h3>
+                            <span class="player-badge">You</span>
+                        </div>
+                        <div class="score" id="score1">0</div>
+                        <div class="player-status">Current Turn</div>
+                    </div>
+
+                    <div class="player" id="player2">
+                        <div class="player-header">
+                            <h3><i class="fas fa-user"></i> Player 2</h3>
+                            <span class="player-badge" id="player2Badge">Human</span>
+                        </div>
+                        <div class="score" id="score2">0</div>
+                        <div class="player-status">Waiting</div>
+                    </div>
+                </div>
+
+                <!-- Dice Display -->
+                <div class="dice-section">
+                    <div class="dice-container">
+                        <div class="die" id="die1">?</div>
+                        <div class="die" id="die2">?</div>
+                    </div>
+                    <div class="dice-total" id="diceTotal">Total: ?</div>
+                </div>
+
+                <!-- Game Controls -->
+                <div class="controls">
+                    <div class="game-status" id="gameStatus">Player 1's turn - Roll the dice!</div>
+
+                    <button class="roll-button" id="rollButton">
+                        <i class="fas fa-dice"></i> Roll Dice
+                    </button>
+
+                    <div class="operation-buttons" id="operationButtons">
+                        <!-- Operation buttons will be generated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Game Rules -->
+                <div class="rules-panel">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Game Rules</h3>
+                    <div class="rules-list">
+                        <div class="rule-item">
+                            <i class="fas fa-dice"></i> <strong>Roll two dice</strong> on your turn
+                        </div>
+                        <div class="rule-item">
+                            <i class="fas fa-calculator"></i> <strong>Choose how to combine</strong> the two numbers
+                        </div>
+                        <div class="rule-item">
+                            <i class="fas fa-bullseye"></i> <strong>Reach exactly 100</strong> to win
+                        </div>
+                        <div class="rule-item">
+                            <i class="fas fa-exclamation-circle"></i> <strong>Going over 100</strong> makes you bust and
+                            subtract points
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Confetti Container -->
+    <div id="confettiContainer"></div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>
